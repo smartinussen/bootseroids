@@ -1,9 +1,6 @@
-from pygame.transform import rotate
-
 import circleshape
 import constants
 import pygame
-
 
 class Player(circleshape.CircleShape):
     def __init__(self, x, y):
