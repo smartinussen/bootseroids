@@ -3,9 +3,14 @@ import constants
 import pygame
 
 class Player(circleshape.CircleShape):
+    containers = ()  # Default empty tuple
+
     def __init__(self, x, y):
         super().__init__(x, y, constants.PLAYER_RADIUS)
         self.rotation = 0
+
+        for container in self.__class__.containers:
+            container.add(self)
 
     # in the player class
     def triangle(self):
